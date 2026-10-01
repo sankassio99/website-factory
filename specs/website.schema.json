@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://website-spec-factory.dev/schemas/website.schema.json",
+  "title": "Website Specification",
+  "description": "Canonical source-of-truth specification for a website project.",
+  "type": "object",
+  "required": ["project", "business", "pages", "technology", "deployment"],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": ["name", "description", "type", "language", "locale"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "minLength": 1},
+        "language": {"$ref": "#/$defs/language"},
+        "locale": {"$ref": "#/$defs/locale"}
+      },
+      "additionalProperties": false
+    },
+    "business": {
+      "type": "object",
+      "required": ["name", "industry"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "description": {"type": "string"},
+        "industry": {"type": "string", "minLength": 1},
+        "location": {"type": "string"},
+        "target_audience": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "brand": {
+      "type": "object",
+      "properties": {
+        "colors": {
+          "type": "object",
+          "properties": {
+            "primary": {"$ref": "#/$defs/color"},
+            "secondary": {"$ref": "#/$defs/color"},
+            "accent": {"$ref": "#/$defs/color"},
+            "background": {"$ref": "#/$defs/color"},
+            "text": {"$ref": "#/$defs/color"}
+          },
+          "additionalProperties": false
+        },
+        "typography": {
+          "type": "object",
+          "properties": {
+            "heading": {"type": "string"},
+            "body": {"type": "string"}
+          },
+          "additionalProperties": false
+        },
+        "tone": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "logo": {"type": "string"},
+        "images": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "page.schema.json"}
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "description": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "navigation": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "path"],
+            "properties": {
+              "label": {"type": "string", "minLength": 1},
+              "path": {"type": "string", "pattern": "^/"}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "seo": {
+      "type": "object",
+      "properties": {
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "keywords": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "locale": {"$ref": "#/$defs/locale"}
+      },
+      "additionalProperties": false
+    },
+    "technology": {
+      "type": "object",
+      "required": ["framework"],
+      "properties": {
+        "framework": {"type": "string", "minLength": 1},
+        "styling": {"type": "string"},
+        "package_manager": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "deployment": {
+      "type": "object",
+      "required": ["provider"],
+      "properties": {
+        "provider": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "$defs": {
+    "color": {
+      "type": "string",
+      "pattern": "^(#[0-9A-Fa-f]{3}|#[0-9A-Fa-f]{6}|TODO|NEEDS_INPUT)$"
+    },
+    "language": {
+      "oneOf": [
+        {"enum": ["TODO", "NEEDS_INPUT"]},
+        {"type": "string", "pattern": "^[a-z]{2,3}$"}
+      ]
+    },
+    "locale": {
+      "oneOf": [
+        {"enum": ["TODO", "NEEDS_INPUT"]},
+        {"type": "string", "pattern": "^[a-z]{2}(-[A-Z]{2})?$"}
+      ]
+    }
+  },
+  "additionalProperties": false
+}

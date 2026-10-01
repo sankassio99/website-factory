@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://website-spec-factory.dev/schemas/design.schema.json",
+  "title": "Design Specification",
+  "type": "object",
+  "required": ["project", "visual_direction", "layout", "responsive", "accessibility"],
+  "properties": {
+    "project": {"type": "string", "minLength": 1},
+    "visual_direction": {
+      "type": "object",
+      "required": ["summary"],
+      "properties": {
+        "summary": {"type": "string", "minLength": 1},
+        "tone": {"type": "string"},
+        "references": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "color_system": {
+      "type": "object",
+      "properties": {
+        "primary": {"type": "string"},
+        "secondary": {"type": "string"},
+        "accent": {"type": "string"},
+        "surface": {"type": "string"},
+        "text": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "typography": {
+      "type": "object",
+      "properties": {
+        "heading": {"type": "string"},
+        "body": {"type": "string"},
+        "scale": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "layout": {
+      "type": "object",
+      "required": ["grid", "spacing"],
+      "properties": {
+        "grid": {"type": "string"},
+        "spacing": {"type": "string"},
+        "component_hierarchy": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "purpose"],
+        "properties": {
+          "name": {"type": "string"},
+          "purpose": {"type": "string"},
+          "states": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "responsive": {
+      "type": "object",
+      "required": ["mobile", "tablet", "desktop"],
+      "properties": {
+        "mobile": {"type": "string"},
+        "tablet": {"type": "string"},
+        "desktop": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "accessibility": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,59 @@
+project:
+  name: TODO
+  description: TODO
+  type: business
+  language: TODO
+  locale: TODO
+business:
+  name: TODO
+  industry: TODO
+  location: TODO
+  target_audience: NEEDS_INPUT
+brand:
+  colors:
+    primary: TODO
+    secondary: TODO
+    accent: TODO
+    background: "#FFFFFF"
+    text: "#111827"
+  typography:
+    heading: TODO
+    body: TODO
+  tone: TODO
+assets:
+  logo: NEEDS_INPUT
+  images: []
+pages:
+  - path: /
+    name: Home
+    purpose: Explain the business and lead visitors to the primary action.
+    sections:
+      - name: Hero
+        purpose: State the value proposition and primary call to action.
+      - name: Services
+        purpose: Explain the main offerings.
+      - name: Trust
+        purpose: Present credible proof and reassurance.
+      - name: Contact
+        purpose: Make conversion easy.
+features:
+  - name: Contact form
+    description: Collect qualified visitor enquiries.
+navigation:
+  items:
+    - label: Home
+      path: /
+seo:
+  title: TODO
+  description: TODO
+  keywords: []
+  locale: TODO
+technology:
+  framework: Next.js
+  styling: Tailwind CSS
+  package_manager: npm
+deployment:
+  provider: Vercel
+open_questions:
+  - "NEEDS_INPUT: approved business copy"
+  - "NEEDS_INPUT: logo and image assets"
