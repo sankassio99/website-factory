@@ -1,0 +1,73 @@
+reference:
+  url: https://reference.example/fictional-professional-services
+  access_status: PARTIAL_ANALYSIS
+  reference_type: fictional-example
+  analyzed_at: "2026-10-01"
+general_information:
+  title:
+    value: Fictional professional services website
+    basis: Observed
+  apparent_business_category:
+    value: Professional services
+    basis: Inferred
+  primary_purpose:
+    value: Encourage prospective clients to request an introductory consultation.
+    basis: Observed
+  target_audience:
+    value: UNKNOWN
+    basis: Unknown
+  language:
+    value: English
+    basis: Observed
+  locale:
+    value: UNKNOWN
+    basis: Unknown
+information_architecture:
+  basis: Observed
+  home:
+    - hero
+    - credibility-introduction
+    - service-grid
+    - proof
+    - conversion-cta
+    - footer
+  navigation:
+    - home
+    - services
+    - insights
+    - contact
+visual_analysis:
+  colors:
+    - role: primary
+      value: deep blue-green
+      basis: Inferred
+      approximate: true
+    - role: surface
+      value: off-white
+      basis: Observed
+      approximate: true
+  typography:
+    heading_style:
+      value: high-contrast editorial sans-serif
+      basis: Inferred
+    body_style:
+      value: neutral sans-serif with generous line height
+      basis: Observed
+  responsive_behavior:
+    value: UNKNOWN
+    basis: Unknown
+    note: No browser viewport tooling was used for this fictional example.
+reusable_patterns:
+  - name: Split conversion hero
+    basis: Observed
+    abstraction: Lead with value proposition, supporting copy, CTA, and contextual media.
+  - name: Service evidence grid
+    basis: Observed
+    abstraction: Use compact cards to explain a small set of offerings and outcomes.
+  - name: Repeated conversion CTA
+    basis: Inferred
+    abstraction: Repeat a clear next action after supporting evidence.
+excluded_source_data:
+  - Company name and all marketing copy
+  - Brand marks, images, and analytics identifiers
+  - Contact details and customer proof

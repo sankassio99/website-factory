@@ -16,6 +16,32 @@ This is an orchestration recommendation, not a rigid implementation. New
 agents can be introduced between stages when their input and output contracts
 are explicit.
 
+## Template generation from a reference
+
+```text
+template-architect
+  -> website-reference-analysis
+  -> source-analysis.yaml
+  -> pattern extraction
+  -> template.yaml
+  -> templates/generated/<template-name>/
+```
+
+The Template Architect uses an accessible reference URL to document
+information architecture, visual and UX patterns, components, and responsive
+findings. It then removes source-specific information and creates an abstract
+template. The generated template can later combine with a new website
+specification:
+
+```text
+Generated template + new website specification + new brand assets
+  -> website generation
+```
+
+No stage may turn a reference website into a clone. If the URL is unavailable,
+authenticated, or partially inspectable, the workflow must report
+`REFERENCE_UNAVAILABLE`, `AUTHENTICATED_REFERENCE`, or `PARTIAL_ANALYSIS`.
+
 ## Stages
 
 ### 1. Discovery
@@ -73,6 +99,7 @@ return the actual URL. Never fabricate a deployment result.
 | `website-development` | Website and design specifications, implementation plan | Website implementation and build results |
 | `website-qa` | Specifications and implementation | `qa-report.md` |
 | `website-deployment` | Validated project and provider availability | Verified deployment URL or explicit blocker |
+| `website-reference-analysis` | Reference URL and available inspection tools | Source analysis and reusable template specification |
 
 ## Intended agent boundaries
 
@@ -81,3 +108,4 @@ return the actual URL. Never fabricate a deployment result.
 | `website-architect` | Requirements, specifications, architecture, and implementation plan | Implement a website unless explicitly instructed |
 | `frontend-engineer` | Implement and validate the approved specifications | Arbitrarily change product requirements |
 | `website-reviewer` | Independently review requirements, UX, accessibility, SEO, and quality | Assume implementation is correct |
+| `template-architect` | Analyze references and create reusable templates | Clone a source website or implement the final website by default |

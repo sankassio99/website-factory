@@ -30,6 +30,13 @@ skills/
 └── wordpress/
 ```
 
+The `website-reference-analysis` skill demonstrates an analysis skill that
+creates a source analysis and a reusable template without becoming an
+implementation skill. Future capabilities such as `visual-design-analysis`,
+`component-analysis`, `seo-analysis`, `conversion-analysis`,
+`accessibility-analysis`, `performance-analysis`, and
+`content-structure-analysis` should use the same artifact boundaries.
+
 ## Add an agent
 
 Create `agents/<name>.md` and define:
@@ -64,3 +71,25 @@ skill may invoke it. Specify:
 
 Never add credentials, tokens, or secret configuration to a template, example,
 skill, or agent definition.
+
+## Extend the template library
+
+Create generated templates under `templates/generated/<template-slug>/`. Each
+directory must keep the inspected source analysis separate from the abstract
+template:
+
+```text
+<template-slug>/
+├── source-analysis.yaml
+├── template.yaml
+├── design-tokens.yaml
+├── pages/
+├── components/
+└── README.md
+```
+
+Validate `template.yaml` against `specs/template.schema.json`. Ensure that its
+name and slug are generic, that every page section references an existing
+component, and that source-specific copy, people, brands, identifiers, and
+assets have been removed. Template decisions should identify whether they are
+`Observed`, `Inferred`, `Default`, or `Unknown`.

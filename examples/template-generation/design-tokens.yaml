@@ -1,0 +1,34 @@
+colors:
+  primary:
+    value: "#164E63"
+    basis: Inferred
+    approximate: true
+  surface:
+    value: "#F8FAFC"
+    basis: Observed
+    approximate: true
+  text:
+    value: "#0F172A"
+    basis: Default
+    approximate: false
+typography:
+  heading:
+    value: Editorial display face selected by the new brand.
+    basis: Inferred
+    approximate: false
+  body:
+    value: Neutral sans-serif with comfortable line height.
+    basis: Observed
+    approximate: false
+spacing:
+  value: Four- or eight-point spacing scale with generous section rhythm.
+  basis: Inferred
+  approximate: true
+borders:
+  value: Subtle neutral border and moderate radius.
+  basis: Inferred
+  approximate: true
+shadows:
+  value: Minimal elevation; use contrast and spacing first.
+  basis: Default
+  approximate: false
