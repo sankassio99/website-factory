@@ -1,0 +1,10 @@
+component:
+  name: cta
+  type: call-to-action
+  variant: focused-product-action
+  purpose: Repeat the approved primary product action after the evidence path.
+  content_structure:
+    - heading
+    - supporting-copy
+    - primary-action
+  responsive_behavior: Keep action size, contrast, and keyboard focus accessible on every viewport.

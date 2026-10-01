@@ -1,0 +1,11 @@
+component:
+  name: footer
+  type: footer
+  variant: product-footer
+  purpose: Provide secondary product, resource, support, and legal navigation.
+  content_structure:
+    - product-navigation
+    - resource-navigation
+    - legal-navigation
+    - optional-social-links
+  responsive_behavior: Stack navigation groups in logical reading order.
