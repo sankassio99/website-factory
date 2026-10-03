@@ -93,7 +93,7 @@ export default function Home() {
       </div>
 
       <header className="sticky top-0 z-30 border-b border-ink/10 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 md:px-8">
+        <div className="text-white mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 md:px-8">
           <a
             className="group flex items-center gap-3"
             href="#inicio"
@@ -132,7 +132,7 @@ export default function Home() {
 
           <a
             href="#contato"
-            className="inline-flex items-center gap-2 bg-ink px-4 py-3 text-[11px] font-semibold tracking-wide text-white transition hover:bg-accent sm:px-5"
+            className="inline-flex items-center gap-2 text-white bg-ink px-4 py-3 text-[11px] font-semibold tracking-wide transition hover:bg-accent sm:px-5"
           >
             Fale conosco
             <ArrowUpRight size={15} weight="bold" />
