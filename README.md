@@ -30,61 +30,6 @@ Persisted specifications make assumptions visible, let different agents
 collaborate without losing context, and make implementation reviewable by
 people.
 
-## Architecture
-
-```text
-Specs -> Skills -> Agents -> MCPs
-```
-
-- **Specs** are structured, versioned source-of-truth artifacts.
-- **Skills** define modular workflow knowledge for one responsibility.
-- **Agents** analyze, implement, or review within their assigned role.
-- **MCPs** provide external actions such as GitHub, Vercel, browser testing,
-  image search, and database access.
-
-See [docs/architecture.md](docs/architecture.md) for the boundary rules.
-
-## Repository structure
-
-```text
-.
-├── specs/                 # JSON Schemas for deterministic artifacts
-├── templates/             # Starting points and generated template library
-├── skills/                # Modular workflow definitions
-├── agents/                # Specialized agent definitions
-├── examples/              # Website and template-generation examples
-└── docs/                  # Architecture, workflow, and extension guides
-```
-
-## Skills
-
-The initial skill directories are:
-
-- `website-discovery`
-- `website-spec`
-- `frontend-design`
-- `website-development`
-- `website-qa`
-- `website-deployment`
-- `website-reference-analysis`
-
-Each skill has one focused responsibility; do not consolidate all
-responsibilities into a single prompt. The expected skill contract is documented in
-[docs/extending-the-system.md](docs/extending-the-system.md).
-
-## Agents
-
-The initial empty agent definitions are:
-
-- `website-architect.md`
-- `frontend-engineer.md`
-- `website-reviewer.md`
-- `template-architect.md`
-
-Their intended boundaries are documented in
-[docs/workflow.md](docs/workflow.md). Populate the files with your preferred
-agent-runtime format without changing the surrounding architecture.
-
 ## MCP integrations
 
 MCP integrations are optional external capabilities, not simulated services:
@@ -126,53 +71,6 @@ Template + new website specification -> new website
 The template—not the reference website—is the reusable source of truth. See
 [examples/template-generation](examples/template-generation) and
 [templates/generated](templates/generated).
-
-## Example workflow
-
-For a request such as “Create a professional website for a dental clinic in
-Lisbon”:
-
-1. Record unknown critical facts as `NEEDS_INPUT` or `TODO`.
-2. Create `website-spec.yaml` from the discovery output.
-3. Create `design-spec.yaml` from the website specification.
-4. Create an implementation plan that maps specification requirements to work.
-5. Implement the site without contradicting the specifications.
-6. Produce `qa-report.md` with `PASS`, `WARN`, and `FAIL` findings.
-7. Commit and publish through GitHub MCP when available.
-8. Deploy through Vercel MCP when available and return the verified URL.
-
-The full worked artifact set is in
-[examples/dental-clinic](examples/dental-clinic).
-
-## Add a new skill
-
-1. Create `skills/<skill-name>/SKILL.md`.
-2. Define its purpose, inputs, outputs, responsibilities, rules, workflow,
-   validation, and failure conditions.
-3. Reference existing specifications rather than duplicating their authority.
-4. Add the new skill to the applicable orchestration documentation.
-
-## Add a new agent
-
-1. Create `agents/<agent-name>.md`.
-2. Define the role, allowed inputs, outputs, authority boundaries, and
-   validation responsibilities.
-3. Assign skills to the agent rather than duplicating skill knowledge.
-4. Update the orchestration diagram if the execution order changes.
-
-## Add a website template
-
-1. Create `templates/<website-type>/website-spec.yaml`.
-2. Keep the template valid against
-   [`specs/website.schema.json`](specs/website.schema.json).
-3. Include only safe defaults; use `TODO` or `NEEDS_INPUT` for critical
-   business facts.
-4. Add an example when the template introduces new conventions.
-
-Generated templates belong in `templates/generated/<template-slug>/`. Keep
-`source-analysis.yaml` separate from `template.yaml`, validate the reusable
-template against [`specs/template.schema.json`](specs/template.schema.json),
-and never carry source-specific copy or assets into the reusable artifact.
 
 ## Vercel deployment
 
