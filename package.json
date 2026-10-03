@@ -1,0 +1,24 @@
+{
+  "name": "website-factory",
+  "version": "1.0.0",
+  "description": "Website AI creator",
+  "homepage": "https://github.com/sankassio99/website-factory#readme",
+  "bugs": {
+    "url": "https://github.com/sankassio99/website-factory/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sankassio99/website-factory.git"
+  },
+  "license": "MIT",
+  "author": "kassio.santana",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
