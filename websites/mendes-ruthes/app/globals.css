@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #254559;
+  --color-surface: #c6c5cb;
+  --color-muted: #908f95;
+  --color-accent: #d18a43;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+:root {
+  color-scheme: light;
+  --color-ink: #254559;
+  --color-surface: #c6c5cb;
+  --color-muted: #908f95;
+  --color-accent: #d18a43;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--color-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #d18a43;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.display-serif {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+
+.hero-image {
+  background-image:
+    linear-gradient(180deg, rgb(17 38 51 / 8%) 30%, rgb(17 38 51 / 70%) 100%),
+    url("/images/banner.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.image-grain {
+  background-image: radial-gradient(rgb(37 69 89 / 12%) 0.6px, transparent 0.6px);
+  background-size: 6px 6px;
+}
+
+.form-field {
+  width: 100%;
+  border: 1px solid rgb(37 69 89 / 16%);
+  border-radius: 2px;
+  background-color: #fff;
+  padding: 0.9rem 1rem;
+  color: var(--color-ink);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.form-field::placeholder {
+  color: #908f95;
+}
+
+.form-field:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgb(209 138 67 / 14%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
