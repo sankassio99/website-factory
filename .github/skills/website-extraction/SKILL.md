@@ -7,6 +7,8 @@ description: Efficiently capture authorized page text, page links, image/asset U
 
 Collect a concise, traceable snapshot of the supplied website. By default, extract content only from the supplied site and its same-origin pages. Do not use the site's layout or interaction patterns as a template.
 
+This skill is limited to website content extraction. Do not inspect or check project dependencies as part of this workflow.
+
 ## Rights, privacy, and access
 
 - Before copying full page text or enabling reuse of images/assets, confirm that the user has the rights or permission to do so. A public URL alone is not permission. If authorization is unclear, ask once before extracting. Do not reproduce full text or present assets as reusable until permission is confirmed.
