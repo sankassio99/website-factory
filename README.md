@@ -94,6 +94,25 @@ Both workflows respect access and copyright limits and avoid copying protected
 source material. The extraction brief informs original content; a reference
 template captures abstract patterns that can be adapted for a new site.
 
+### Build a website from a discovery package
+
+```text
+Organization or discovery package name
+  -> content-discovery/generated/<site-name>/
+       content-briefing.yaml
+       pages/*.md
+  -> original, responsive website
+  -> websites/<site-name>/
+```
+
+Use the
+[create-website-from-discovery skill](.github/skills/create-website-from-discovery/SKILL.md)
+and provide the organization or package name. The skill uses the briefing and
+referenced page files as factual input, handles unverified details cautiously,
+and creates a separate website project without copying the source site's
+design. When photography is appropriate, it searches Unsplash through the
+available MCP and follows the returned attribution requirements.
+
 ## Vercel deployment
 
 Deployment is a workflow stage, not an assumption. The deployment agent must
