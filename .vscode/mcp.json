@@ -1,9 +1,5 @@
 {
   "servers": {
-    "vercel": {
-      "type": "http",
-      "url": "https://mcp.vercel.com"
-    },
     "unsplash": {
       "type": "stdio",
       "command": "node",
