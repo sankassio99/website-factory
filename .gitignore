@@ -7,3 +7,4 @@ node_modules/
 dist/
 coverage/
 *.log
+.github/prompts/ui-ux-pro-max/scripts/__pycache__/
