@@ -335,6 +335,9 @@ Scope notice: The rules below are for App UI (iOS/Android/React Native/Flutter),
 | **Icon Alignment** | Align icons to text baseline and maintain consistent padding. | Misaligned icons or inconsistent spacing around them. | Prevents subtle visual imbalance that reduces perceived quality. |
 | **Icon Contrast** | Meaningful icons and control boundaries need at least 3:1 against adjacent colors; decorative icons must not carry information. | Low-contrast icons that carry meaning or state. | Applies the non-text contrast role instead of a text-size rule. |
 
+### Images
+
+When a UI needs a specific photo or visual image (for example, a banner, hero, or background), use the Unsplash MCP to find an image that fits the subject, mood, palette, and composition. Use the selected image rather than a generic placeholder, and follow any attribution or usage guidance returned by the MCP. Skip image sourcing when imagery is not needed.
 
 ### Interaction (App)
 

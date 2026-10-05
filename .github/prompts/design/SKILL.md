@@ -37,6 +37,10 @@ Unified design skill: brand, tokens, UI, logo, CIP, slides, banners, social phot
 | Social media images/photos | Social Photos (built-in) | `references/social-photos-design.md` |
 | SVG icons, icon sets | Icon (built-in) | `references/icon-design.md` |
 
+## Image Sourcing
+
+When a design needs a specific photographic image for a banner, background, or any other placement, use the Unsplash MCP to find an image that fits the subject, mood, palette, and composition. Use the selected image instead of a generic placeholder, and follow any attribution or usage guidance provided by the MCP. Skip image sourcing when the design does not need a photo.
+
 ## Logo Design (Built-in)
 
 55+ styles, 30 color palettes, 25 industry guides. Gemini Nano Banana models.
