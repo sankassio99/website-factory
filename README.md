@@ -109,9 +109,10 @@ Use the
 [create-website-from-discovery skill](.github/skills/create-website-from-discovery/SKILL.md)
 and provide the organization or package name. The skill uses the briefing and
 referenced page files as factual input, handles unverified details cautiously,
-and creates a separate website project without copying the source site's
-design. When photography is appropriate, it searches Unsplash through the
-available MCP and follows the returned attribution requirements.
+uses the repository's UI/UX Pro Max prompt for its design system, and creates a
+separate website project without copying the source site's design. When
+photography is appropriate, it searches Unsplash through the available MCP and
+follows the returned attribution requirements.
 
 ## Vercel deployment
 
