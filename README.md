@@ -43,17 +43,39 @@ MCP integrations are optional external capabilities, not simulated services:
 No credential belongs in this repository. If an MCP is unavailable, the
 responsible agent must report that the action cannot be completed.
 
-## Template generation from a reference
+## Website research and reference templates
 
-The Template Architect analyzes an accessible reference URL through the
-[website-reference-analysis skill](.github/skills/website-reference-analysis/SKILL.md).
-It creates a **source analysis** and an abstract **reusable template**:
+The repository supports two distinct workflows. Choose information extraction
+when building a new website from scratch; choose reference analysis when a
+reference site's content structure and design patterns should inform a
+reusable template.
+
+### Extract information for a new website
 
 ```text
-Reference URL
-  -> source analysis
-  -> pattern extraction
-  -> template specification
+Organization website URL
+  -> content evidence
+  -> organization and offering facts
+  -> independent content recommendations
+  -> content-discovery/generated/<site-name>/
+       content-brief.yaml
+       source-analysis.md
+       content-outline.md
+```
+
+Use the [website-extraction skill](.github/skills/website-extraction/SKILL.md)
+to collect verified, source-attributed information about the organization,
+audiences, offerings, locations, contact channels, and policies. This
+content-only workflow supports a new website built from scratch. The source
+site is not a reference for layout, navigation, visual design, branding,
+assets, or interaction patterns.
+
+### Create a reusable template from a reference
+
+```text
+Reference website URL
+  -> page/content structure and design-pattern analysis
+  -> reusable, abstract template
   -> templates/generated/<template-name>/
        template.yaml
        source-analysis.md
@@ -61,20 +83,16 @@ Reference URL
        assets.md
 ```
 
-This workflow extracts reusable information architecture, component, UX, and
-design-system patterns. It does not copy the source website's text, private
-data, identifiers, source code, brand assets, or copyrighted images.
-
-Use the generated template with a new website specification, new business
-content, approved brand assets, and new images:
-
-```text
-Template + new website specification -> new website
-```
-
-The template—not the reference website—is the reusable source of truth. See
-[examples/template-generation](examples/template-generation) and
+Use the
+[website-reference-analysis skill](.github/skills/website-reference-analysis/SKILL.md)
+when the goal is to create new websites based on an existing reference. It
+documents reusable page structures, visual patterns, and asset references
+without copying source code or prose. Generated templates are stored under
 [templates/generated](templates/generated).
+
+Both workflows respect access and copyright limits and avoid copying protected
+source material. The extraction brief informs original content; a reference
+template captures abstract patterns that can be adapted for a new site.
 
 ## Vercel deployment
 
