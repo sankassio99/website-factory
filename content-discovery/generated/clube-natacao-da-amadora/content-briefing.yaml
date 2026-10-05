@@ -1,0 +1,140 @@
+schema_version: 1
+site_slug: clube-natacao-da-amadora
+source:
+  starting_url: http://www.natacaoamadora.pt/
+  analyzed_at: 2026-10-05
+  text_and_asset_reuse_authorized: confirmed
+  authorization_basis: user-confirmed
+pages:
+  - url: http://www.natacaoamadora.pt/
+    file: pages/home.md
+    title: Clube Natação da Amadora
+    access: reviewed
+  - url: http://www.natacaoamadora.pt/desconto.htm
+    file: pages/descontos.md
+    title: Nova página 1
+    access: reviewed
+  - url: http://www.natacaoamadora.pt/beneficios.htm
+    file: pages/beneficios.md
+    title: Voltar
+    access: reviewed
+organization:
+  name: Clube Natação da Amadora
+  summary: >-
+    A swimming club whose homepage identifies operating pools in Alfornelos and
+    Reboleira, publishes registration information, and lists secretary phone
+    numbers for both locations.
+  evidence_url: http://www.natacaoamadora.pt/
+relevant_links:
+  - label: BENEFÍCIOS DA NATAÇÃO
+    url: http://natacaoamadora.pt/beneficios.htm
+    evidence_url: http://www.natacaoamadora.pt/
+  - label: CLUBE NATAÇÃO DA AMADORA
+    url: http://natacaoamadora.pt/ranking.htm
+    evidence_url: http://www.natacaoamadora.pt/
+  - label: EFICIÊNCIA ENERGÉTICA
+    url: http://natacaoamadora.pt/Central.htm
+    evidence_url: http://www.natacaoamadora.pt/
+  - label: ÚLTIMA HORA
+    url: http://natacaoamadora.pt/abre.htm
+    evidence_url: http://www.natacaoamadora.pt/
+  - label: Avançar
+    url: http://www.natacaoamadora.pt/index2.html
+    evidence_url: http://www.natacaoamadora.pt/
+  - label: PDF document
+    url: http://natacaoamadora.pt/CNA_2Pad_1.pdf
+    evidence_url: http://www.natacaoamadora.pt/
+  - label: Voltar
+    url: http://www.natacaoamadora.pt/index.html
+    evidence_url: http://www.natacaoamadora.pt/beneficios.htm
+assets:
+  - url: http://www.natacaoamadora.pt/SiglaCNA.jpg
+    alt_text: unavailable
+    evidence_url: http://www.natacaoamadora.pt/
+  - url: http://www.natacaoamadora.pt/VOCECONHECE.png
+    alt_text: unavailable
+    evidence_url: http://www.natacaoamadora.pt/
+  - url: http://www.natacaoamadora.pt/animbar.gif
+    alt_text: unavailable
+    evidence_url: http://www.natacaoamadora.pt/
+  - url: http://www.natacaoamadora.pt/VERCMA3.png
+    alt_text: unavailable
+    evidence_url: http://www.natacaoamadora.pt/
+  - url: http://www.natacaoamadora.pt/Desconto2122_2.png
+    alt_text: unavailable
+    evidence_url: http://www.natacaoamadora.pt/desconto.htm
+  - url: http://natacaoamadora.pt/CNA_2Pad_1.pdf
+    type: linked document
+    evidence_url: http://www.natacaoamadora.pt/
+palette:
+  - color: "#000000"
+    observed_role: text
+    evidence_url: http://www.natacaoamadora.pt/
+    method: computed-style
+    confidence: high
+    observed_count: 108
+  - color: "#8C1717"
+    observed_role: text
+    evidence_url: http://www.natacaoamadora.pt/
+    method: computed-style
+    confidence: high
+    observed_count: 22
+  - color: "#4F4F2F"
+    observed_role: text
+    evidence_url: http://www.natacaoamadora.pt/
+    method: computed-style
+    confidence: high
+    observed_count: 19
+  - color: "#FF0000"
+    observed_role: text
+    evidence_url: http://www.natacaoamadora.pt/
+    method: computed-style
+    confidence: high
+    observed_count: 13
+  - color: "#CC2290"
+    observed_role: text
+    evidence_url: http://www.natacaoamadora.pt/
+    method: computed-style
+    confidence: high
+    observed_count: 7
+  - color: "#3333CC"
+    observed_role: text
+    evidence_url: http://www.natacaoamadora.pt/
+    method: computed-style
+    confidence: high
+    observed_count: 6
+  - color: "#215E21"
+    observed_role: text
+    evidence_url: http://www.natacaoamadora.pt/
+    method: computed-style
+    confidence: high
+    observed_count: 5
+  - color: "#FF9900"
+    observed_role: text
+    evidence_url: http://www.natacaoamadora.pt/
+    method: computed-style
+    confidence: high
+    observed_count: 4
+  - color: "#33CCF0"
+    observed_role: text
+    evidence_url: http://www.natacaoamadora.pt/
+    method: computed-style
+    confidence: high
+    observed_count: 3
+unresolved_questions:
+  - >-
+    The homepage advertises registrations for September 2024 to July 2025; the
+    currently available season and pool status are unverified.
+  - >-
+    The discounts page refers to a "fase transitória" without a date, and its
+    linked graphic may contain additional details not transcribed here.
+  - >-
+    Only three pages were reviewed. Other homepage links, including the ranking,
+    energy-efficiency, latest-news, and next-page destinations, remain
+    unreviewed.
+  - >-
+    The homepage also has a blankly labeled link to http://natacaoamadora.pt/esc.htm;
+    a shared browser tab showed a 404 page there, so no page content was included.
+  - >-
+    The homepage refers to 42 years of activity and separately to a 40-year
+    celebration; the date relationship is not established.
