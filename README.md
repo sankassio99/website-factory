@@ -46,8 +46,8 @@ responsible agent must report that the action cannot be completed.
 ## Template generation from a reference
 
 The Template Architect analyzes an accessible reference URL through the
-`website-reference-analysis` skill. It creates a **source analysis** and an
-abstract **reusable template**:
+[website-reference-analysis skill](.github/skills/website-reference-analysis/SKILL.md).
+It creates a **source analysis** and an abstract **reusable template**:
 
 ```text
 Reference URL
@@ -55,6 +55,10 @@ Reference URL
   -> pattern extraction
   -> template specification
   -> templates/generated/<template-name>/
+       template.yaml
+       source-analysis.md
+       content-outline.md
+       assets.md
 ```
 
 This workflow extracts reusable information architecture, component, UX, and
