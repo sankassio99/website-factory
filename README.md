@@ -54,21 +54,21 @@ reusable template.
 
 ```text
 Organization website URL
-  -> content evidence
-  -> organization and offering facts
-  -> independent content recommendations
+  -> rights-aware page and asset extraction
+  -> page-by-page Markdown files
+  -> organization facts and observed colors
   -> content-discovery/generated/<site-name>/
-       content-brief.yaml
+       content-briefing.yaml
+       pages/<page-slug>.md
        source-analysis.md
-       content-outline.md
 ```
 
 Use the [website-extraction skill](.github/skills/website-extraction/SKILL.md)
-to collect verified, source-attributed information about the organization,
-audiences, offerings, locations, contact channels, and policies. This
-content-only workflow supports a new website built from scratch. The source
-site is not a reference for layout, navigation, visual design, branding,
-assets, or interaction patterns.
+to collect source-attributed page text, links, image/asset URLs, organization
+facts, and an observed color palette. Full-text or asset reuse requires the
+user to confirm rights or permission; otherwise the workflow records concise
+summaries and asset links only. The palette is recorded as source metadata, not
+as a direction to reproduce the source site's design.
 
 ### Create a reusable template from a reference
 
