@@ -3,6 +3,13 @@
     "vercel": {
       "type": "http",
       "url": "https://mcp.vercel.com"
+    },
+    "unsplash": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${env:HOME}/.local/share/unsplash-smart-mcp-server/node_modules/@drumnation/unsplash-smart-mcp-server/dist/server.js"
+      ]
     }
   }
 }
