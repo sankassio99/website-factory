@@ -7,6 +7,7 @@ const nav = [
   { href: "#piscinas", label: "Piscinas" },
   { href: "#inscricoes", label: "Inscrições" },
   { href: "#clube", label: "O Clube" },
+  { href: "#reviews", label: "Reviews" },
   { href: "#energia", label: "Energia" },
   { href: "#contactos", label: "Contactos" },
 ];
@@ -28,6 +29,31 @@ const facts = [
   { value: "42", label: "anos de atividade ao serviço das populações" },
   { value: "50 000+", label: "utentes e sócios ao longo do percurso" },
   { value: "2", label: "piscinas em funcionamento: Alfornelos e Reboleira" },
+];
+
+const reviews = [
+  {
+    name: "Vitória Luísa",
+    details: "9 avaliações · 4 fotos · há um ano",
+    text: "Inverno com piscina em temperatura de 28°C, balneário temperatura ambiente e chuveiros quentinhos. Secador para cabelo em perfeito estado. Nada a reclamar, apenas elogiar. ❤️",
+  },
+  {
+    name: "Maria Paula Centrone",
+    details: "Local Guide · 9 avaliações · 3 fotos · há 3 anos",
+    text: "Fomos muito bem atendidos sobre dúvidas que tínhamos a respeito do nosso filho que tem autismo. Quando houver vagas vamos levar ele para fazer natação. Muito obrigada! Eu e meu esposo comemos sardinhas no restaurante. Muito boas!",
+  },
+  {
+    name: "Luisa Farinha",
+    details: "3 avaliações · há um ano",
+    text: "Gostei muito. A minha neta pratica lá natação. O Clube tem muito boas condições.",
+  },
+];
+
+const gallery = [
+  { src: "/gallery/piscina-1.webp", alt: "Piscina do Clube Natação da Amadora" },
+  { src: "/gallery/piscina-2.webp", alt: "Instalações da piscina do Clube Natação da Amadora" },
+  { src: "/gallery/pessoas-1.webp", alt: "Pessoas nas instalações do Clube Natação da Amadora" },
+  { src: "/gallery/pessoas-2.webp", alt: "Ambiente do Clube Natação da Amadora" },
 ];
 
 const linkClass =
@@ -200,6 +226,65 @@ export default function Home() {
             <a href={`${SOURCE}/beneficios.htm`} className={`mt-5 inline-block text-water ${linkClass}`}>
               Ver no site do clube
             </a>
+          </div>
+        </section>
+
+        <section id="reviews" className="bg-ink text-white">
+          <div className="mx-auto max-w-6xl px-5 py-16">
+            <div data-reveal>
+              <p className="font-semibold uppercase tracking-[0.2em] text-[#ffb866]">
+                Experiências da comunidade
+              </p>
+              <h2 className="mt-2 text-3xl font-extrabold">O que dizem sobre o clube</h2>
+              <p className="mt-3 max-w-2xl text-lg text-white/85">
+                Famílias, atletas e visitantes partilham a sua experiência nas
+                piscinas e nas instalações do Clube Natação da Amadora.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-5 lg:grid-cols-3">
+              {reviews.map((review, index) => (
+                <article
+                  key={review.name}
+                  data-reveal={index === 0 ? "left" : index === 2 ? "right" : undefined}
+                  className="card-lift flex flex-col rounded-2xl bg-white p-6 text-ink shadow-lg"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="text-xl font-bold text-deep">{review.name}</h3>
+                      <p className="mt-1 text-sm text-ink/65">{review.details}</p>
+                    </div>
+                    <span className="text-lg text-sun" aria-label="5 estrelas">
+                      ★★★★★
+                    </span>
+                  </div>
+                  <p className="mt-5 text-base leading-relaxed">{review.text}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-12">
+              <h3 data-reveal className="text-2xl font-bold">Um espaço vivido por todos</h3>
+              <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4">
+                {gallery.map((photo, index) => (
+                  <figure
+                    key={photo.src}
+                    data-reveal={index % 2 ? "right" : "left"}
+                    className="overflow-hidden rounded-2xl bg-white/10"
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      width={1360}
+                      height={1020}
+                      className="aspect-[4/3] h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </figure>
+                ))}
+              </div>
+              <p className="mt-3 text-sm text-white/65">
+                Fotografias cedidas para utilização no site do Clube Natação da Amadora.
+              </p>
+            </div>
           </div>
         </section>
 
