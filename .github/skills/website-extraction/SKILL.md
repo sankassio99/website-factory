@@ -17,7 +17,7 @@ Collect a concise, traceable snapshot of the supplied website. By default, extra
 
 ## Fast extraction workflow
 
-1. **Set scope and rights.** Start from the supplied URL. Use the user's stated page scope; otherwise inspect the start page, its same-origin HTML links, and any available sitemap. Prioritize pages with organization, offering, location, contact, and policy details. Process at most 5 relevant HTML pages by default; summarize unreviewed links and ask before expanding beyond that. Do not crawl unrelated domains.
+1. **Set scope and rights.** Start from the supplied URL. Use the user's stated page scope; otherwise inspect the start page, its same-origin HTML links, and any available sitemap. Prioritize pages with organization, offering, location, contact, and policy details. Process at most 3 relevant HTML pages by default; summarize unreviewed links and ask before expanding beyond that. Do not crawl unrelated domains.
 2. **Gather once per page.** Use browser-accessible page text and link/alt-text metadata. For each reviewed page, collect its exact URL, title, original-language text, outgoing links, and visible image/asset URLs. Preserve original wording and spelling only when authorization is confirmed. Avoid duplicate fetches; follow a link only when its content is needed and in scope.
 3. **Capture the palette narrowly.** Since the user requested color data, record only recurring, observable color values from page styles or browser-computed styles. Normalize valid values to hex where possible, note the observed role and evidence URL, and mark uncertain roles as `unknown`. Do not inspect or document other design tokens, layout, typography, spacing, or visual hierarchy.
 4. **Track evidence and freshness.** Keep the source URL next to each page, link, asset, and palette value. Mark unavailable pages, stale dates, disagreements, and uncertain values. Do not infer content from inaccessible pages or text embedded in images.
@@ -45,7 +45,7 @@ Use this structure in each `pages/<page-slug>.md`. Keep exact text in its origin
 
 - [<link label>](<exact URL>) — internal | external
 
-## Imagens e assets
+## Imagens, assets and logos
 
 - URL: <exact image or asset URL>
   - Alt text: <text or unavailable>
@@ -56,7 +56,7 @@ Include only links and assets observed on that page. Preserve their actual desti
 
 ## `content-briefing.yaml` structure
 
-Use valid YAML, concise facts, and exact evidence URLs. Do not invent palette values, page content, licenses, or current availability. Set permission to `not_confirmed` unless the user explicitly confirms it for the current extraction.
+Use valid YAML, concise facts, and exact evidence URLs. Do not invent palette values, page content, licenses, or current availability.
 
 ```yaml
 schema_version: 1
@@ -75,23 +75,10 @@ organization:
   name: Example Organization
   summary: Neutral factual summary, not copied page prose.
   evidence_url: https://example.com/about
-links:
-  - label: Contact
-    url: https://example.com/contact
-    source_page: https://example.com/
-assets:
-  - url: https://example.com/image.jpg
-    type: image
-    alt_text: Example image
-    source_page: https://example.com/
-    reuse_authorized: confirmed
 palette:
   - color: "#123456"
     observed_role: primary
     evidence_url: https://example.com/
     method: computed-style
     confidence: medium
-open_questions: []
 ```
-
-Use `not_confirmed` for unconfirmed permission, `unknown` for unavailable metadata, and `needs_confirmation` for uncertain or time-sensitive information. If permission is not confirmed, set `text_and_asset_reuse_authorized: not_confirmed`, use summaries in page Markdown, and set every asset's `reuse_authorized: not_confirmed`. Palette entries describe observed values only; they are not instructions to imitate the source design.
