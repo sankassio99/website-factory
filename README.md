@@ -35,7 +35,6 @@ people.
 MCP integrations are optional external capabilities, not simulated services:
 
 - **GitHub MCP**: repository, branch, commit, pull request, and issue actions.
-- **Vercel MCP**: project creation, deployment, verification, and URL return.
 - **Image/search MCP**: licensed asset discovery and research.
 - **Browser MCP**: rendered-page, route, responsive, and accessibility checks.
 - **Database MCP**: data-backed features when a website requires persistence.
@@ -118,9 +117,9 @@ follows the returned attribution requirements.
 
 Deployment is a workflow stage, not an assumption. The deployment agent must
 validate the project, build it, commit it, publish it through GitHub, deploy
-through Vercel MCP, verify the result, and return the deployment URL. If the
-Vercel MCP is not configured, it must state that automatic deployment did not
-occur.
+with the Vercel CLI (`vercel deploy`), verify the result, and return the
+deployment URL. If the Vercel CLI is not installed or authenticated, it must
+state that automatic deployment did not occur.
 
 ## Roadmap
 
