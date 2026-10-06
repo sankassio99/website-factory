@@ -1,0 +1,125 @@
+schema_version: 1
+name: osno-site
+source:
+  url: https://www.osnosite.com/
+  analyzed_at: 2026-10-06
+  analyzed_pages:
+    - url: https://www.osnosite.com/
+      page_type: home
+    - url: https://www.osnosite.com/contacto/
+      page_type: contact
+design_system:
+  palette:
+    - name: brand-orange
+      hex: "#FF7A00"
+      usage: Primary actions, highlighted interface elements, and calls to action
+      confidence: observed
+    - name: brand-orange-light
+      hex: "#FF930F"
+      usage: Logo accent, emphasis gradients, and decorative highlights
+      confidence: observed
+    - name: brand-orange-dark
+      hex: "#B85200"
+      usage: Eyebrows, supporting links, and text on pale orange surfaces
+      confidence: observed
+    - name: brand-soft
+      hex: "#FFF3E6"
+      usage: Soft feature surfaces and input focus backgrounds
+      confidence: observed
+    - name: ink
+      hex: "#16130E"
+      usage: Primary text, dark hero surfaces, and footer background
+      confidence: observed
+    - name: ink-secondary
+      hex: "#3F3A32"
+      usage: Supporting text and navigation labels
+      confidence: observed
+    - name: muted
+      hex: "#6B6359"
+      usage: Metadata, helper text, and low-emphasis labels
+      confidence: observed
+    - name: mist
+      hex: "#FAF7F2"
+      usage: Alternating section surfaces and form controls
+      confidence: observed
+    - name: line
+      hex: "#ECE6DC"
+      usage: Borders, separators, and browser mockup chrome
+      confidence: observed
+  typography:
+    - role: display
+      family: "Bricolage Grotesque"
+      confidence: observed
+    - role: body
+      family: Inter
+      confidence: observed
+    - role: metadata
+      family: "JetBrains Mono"
+      confidence: observed
+  shape:
+    border_radius: "16px cards, 11px compact controls, and pill-shaped buttons"
+  layout:
+    max_width: "1140px"
+    breakpoints:
+      - "560px: compact single-column controls and footer"
+      - "720px: stacked process steps and simplified example presentation"
+      - "940px: mobile navigation, two-column feature grid, and stacked contact layout"
+    spacing_scale:
+      - "clamp(20px, 5vw, 40px) horizontal page padding"
+      - "clamp(64px, 10vw, 110px) section vertical padding"
+    patterns:
+      - "Fixed translucent navigation becomes a compact drawer on smaller screens"
+      - "Dark image-led hero with a short value proposition and paired actions"
+      - "Editorial sections alternate white, warm-neutral, and dark surfaces"
+      - "Feature cards use a six-column desktop grid and collapse progressively"
+pages:
+  - page_type: home
+    purpose: Explain a service, demonstrate its outcome, and move prospective customers toward contact.
+    sections:
+      - name: navigation
+        content_role: Provide brand recognition, primary anchors, language selection, login or utility access, and a prominent contact action.
+        layout_pattern: Fixed translucent header with desktop links and mobile drawer
+        components: [brand-mark-slot, anchor-links, locale-switcher, utility-link, primary-action, mobile-menu]
+      - name: hero
+        content_role: State the service promise, clarify ownership or outcome, and offer the first conversion paths.
+        layout_pattern: Full-bleed image or texture with dark scrim and constrained text column
+        components: [headline, emphasized-phrase, supporting-copy, primary-action, secondary-action]
+      - name: example-showcase
+        content_role: Make the service tangible with a real or representative result shown across device sizes.
+        layout_pattern: Layered desktop and mobile frames with a supporting caption card
+        components: [desktop-preview-slot, mobile-preview-slot, project-label, project-link]
+      - name: process
+        content_role: Reduce uncertainty by explaining the work in a short sequence.
+        layout_pattern: Three-step horizontal progression with large numerals and connector rules
+        components: [step-list, step-number, step-title, step-description]
+      - name: feature-grid
+        content_role: Summarize the included capabilities and service differentiators.
+        layout_pattern: Responsive card grid with a mixture of compact and wide cards
+        components: [feature-card, icon-slot, feature-title, feature-description, visual-demo-slot]
+      - name: dashboard-showcase
+        content_role: Demonstrate how the customer manages or edits the delivered service.
+        layout_pattern: Dark presentation band with adjacent interface and outcome mockups
+        components: [benefit-list, admin-preview-slot, customer-preview-slot, interaction-hint]
+      - name: conversion-band
+        content_role: Repeat the main invitation after proof and explanation.
+        layout_pattern: Centered text over a dark photographic or textured band
+        components: [section-heading, supporting-copy, inverted-action]
+      - name: footer
+        content_role: Provide secondary navigation, contact route, brand context, and legal or ownership metadata.
+        layout_pattern: Dark three-column footer with a compact bottom bar
+        components: [footer-brand, contact-links, site-links, legal-line, badge-slot]
+  - page_type: contact
+    purpose: Collect a qualified enquiry while setting expectations about the response.
+    sections:
+      - name: contact-introduction
+        content_role: Explain the purpose of the form and provide a direct non-form contact route when available.
+        layout_pattern: Narrow text column beside the form
+        components: [eyebrow, heading, lead-copy, contact-list, back-link]
+      - name: enquiry-form
+        content_role: Gather identity, business context, message, and explicit consent.
+        layout_pattern: Elevated card with stacked labeled controls
+        components: [name-field, email-field, business-field, message-field, consent-checkbox, submit-button, status-message]
+      - name: footer
+        content_role: Preserve the same secondary navigation and ownership context as the home page.
+        layout_pattern: Shared dark footer
+        components: [footer-brand, contact-links, site-links, legal-line]

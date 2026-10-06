@@ -1,0 +1,159 @@
+schema_version: 1
+site_slug: sams-clinica-amadora
+
+source:
+  starting_url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS/Paginas/ClinicaSAMSAmadora.aspx
+  analyzed_at: 2026-10-05
+  text_and_asset_reuse_authorized: confirmed
+  authorization_basis: user-confirmed
+
+pages:
+  - url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS/Paginas/ClinicaSAMSAmadora.aspx
+    file: pages/clinica-sams-amadora.md
+    title: "SAMS - Clínica SAMS Amadora"
+    access: reviewed
+  - url: https://www.sams.pt/QuemSomos/Paginas/Apresentacao.aspx
+    file: pages/apresentacao-quem-somos.md
+    title: "Apresentação (Quem Somos) - SAMS"
+    access: reviewed
+
+organization:
+  name: SAMS
+  summary: >
+    SAMS (Serviços de Assistência Médico-Social) is described on its own site as
+    the largest private health subsystem in Portugal, managed by the Sindicato
+    da Banca, Seguros e Tecnologias – MAIS Sindicato. Its network includes the
+    Hospital SAMS, the Centro Clínico de Lisboa, 17 clinics across the country,
+    an optical service, a pharmacy ("parafarmácia"), and a care home for the
+    elderly. SAMS provides health coverage to its beneficiaries complementary to
+    Portugal's national health service (SNS), and also serves private patients,
+    insurance-company patients, and users covered by agreements/partnerships.
+  evidence_url: https://www.sams.pt/QuemSomos/Paginas/Apresentacao.aspx
+
+  unit:
+    name: Clínica SAMS Amadora
+    address: "Rua Elias Garcia, 219 | 2700-318 Amadora, Portugal"
+    email: clinica.amadora@sams.pt
+    hours: "Dias úteis das 08:00 às 20:00 (weekdays 08:00–20:00)"
+    who_can_access: >
+      SAMS beneficiaries, family users, users under Acordos/Parcerias/Seguradoras
+      (agreements/partnerships/insurers), and private (particular) patients.
+    nearby_references:
+      - "Jardim Delfim Guimarães (20m)"
+      - "Estação ferroviária da CP (80m)"
+      - "Parque Central da Amadora (120m)"
+    public_transport:
+      - "VIMECA Transportes — Rua Elias Garcia: bus lines 104, 106, 107, 132, 144, 154, 155, 163, 181 (50m)"
+      - "VIMECA Transportes — Estação CP Amadora (sul): bus lines 113, 114, 127, 186 (50m)"
+      - "VIMECA Transportes — Estação CP Amadora (norte): bus lines 118, 133, 134, 135, 136, 143 (100m)"
+      - "CP - Comboios de Portugal — Estação Amadora (80m)"
+    specialties:
+      - Alergologia
+      - Audiofonologia
+      - Cardiologia
+      - Cirurgia Geral
+      - "Clínica Geral | Médicos Assistentes"
+      - Consulta de apoio à prótese auditiva
+      - Dermatologia
+      - Endocrinologia
+      - Diabetologia
+      - Dietética e Nutrição
+      - Psicologia Clínica
+      - Estomatologia
+      - "Estomatologia | Odontopediatria"
+      - "Estomatologia | Prótese Removível"
+      - Ginecologia - Obstetrícia
+      - Oftalmologia
+      - Ortopedia
+      - Otorrinolaringologia
+      - Pediatria
+      - "Pediatria | Adolescente"
+      - Psiquiatria
+      - Psiquiatria Infantil
+      - Reumatologia
+      - Urologia
+      - Cirurgia Vascular
+      - "Cirurgia Vascular | Esclerose de Varizes"
+      - Neurologia
+      - Proctologia
+    exams:
+      - Análises Clínicas
+      - Anatomia Patológica
+      - Ecocardiograma 2D Modo M
+      - Ecocardiograma 2D Modo M com doppler
+      - Ecodoppler circulação arterial/venoso
+      - Ecodoppler carotídeo
+      - Eletrocardiografia
+      - Fluxometria
+      - "MAPA | Holter"
+      - Radiologia Dentária
+    other_services:
+      - Enfermagem
+      - Ótica
+    evidence_url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS/Paginas/ClinicaSAMSAmadora.aspx
+
+relevant_links:
+  - url: https://www.sams.pt
+    label: Início
+    evidence_url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS/Paginas/ClinicaSAMSAmadora.aspx
+  - url: https://www.sams.pt/UnidadesSaude
+    label: Unidades de Saúde
+    evidence_url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS/Paginas/ClinicaSAMSAmadora.aspx
+  - url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS
+    label: Clínicas SAMS
+    evidence_url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS/Paginas/ClinicaSAMSAmadora.aspx
+  - url: https://www.sams.pt/QuemSomos/Paginas/default.aspx
+    label: Quem Somos
+    evidence_url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS/Paginas/ClinicaSAMSAmadora.aspx
+  - url: https://www.livroreclamacoes.pt/
+    label: Livro de Reclamações
+    evidence_url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS/Paginas/ClinicaSAMSAmadora.aspx
+
+relevant_assets:
+  - url: https://www.sams.pt/SiteCollectionImages/UnidadesSaude/amadora.jpg
+    description: "Clinic photo on the Clínica SAMS Amadora page (alt text reads 'Almada', likely a source-site mislabel)"
+    evidence_url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS/Paginas/ClinicaSAMSAmadora.aspx
+  - url: https://www.sams.pt/Style%20Library/images/SAMS_Logo2020.png
+    description: "Site header logo (applied via CSS background-image)"
+    evidence_url: https://www.sams.pt/Style%20Library/Styles/main.css?v=36
+
+palette:
+  - color: "#00ABBD"
+    observed_role: primary (brand teal — headings, links, buttons, active menu state)
+    evidence_url: https://www.sams.pt/Style%20Library/Styles/main.css?v=36
+    method: stylesheet-inspection
+    confidence: high
+  - color: "#5A5A5A"
+    observed_role: body text
+    evidence_url: https://www.sams.pt/Style%20Library/Styles/main.css?v=36
+    method: stylesheet-inspection
+    confidence: high
+  - color: "#FFFFFF"
+    observed_role: button text / surface background
+    evidence_url: https://www.sams.pt/Style%20Library/Styles/main.css?v=36
+    method: stylesheet-inspection
+    confidence: high
+  - color: "#F07D00"
+    observed_role: accent (icon color in header login area)
+    evidence_url: https://www.sams.pt/Style%20Library/Styles/main.css?v=36
+    method: stylesheet-inspection
+    confidence: medium
+  - color: "#392E1C"
+    observed_role: unknown (button hover text color)
+    evidence_url: https://www.sams.pt/Style%20Library/Styles/main.css?v=36
+    method: stylesheet-inspection
+    confidence: low
+  - color: "#00535C"
+    observed_role: unknown (cookie-consent banner button text, darker teal variant)
+    evidence_url: https://www.sams.pt/UnidadesSaude/ClinicasSAMS/Paginas/ClinicaSAMSAmadora.aspx
+    method: inline-script-inspection
+    confidence: low
+
+unresolved_questions:
+  - "The clinic photo's alt text reads 'Almada' instead of 'Amadora' — unclear if this is a source-site content error or an unrelated shared image; not corrected here, only noted."
+  - "Full list of SAMS clinics (17 nationwide, per Apresentação page) and other unit types (optical, pharmacy, elderly-care home) were not individually reviewed; only the Amadora clinic was in scope."
+  - "Google Maps embed on the clinic page carries no additional readable text beyond approximate coordinates; exact building imagery/labels were not verified."
+
+access_limitations:
+  - "Scope limited to 2 same-origin pages (clinic detail + organization 'Apresentação') per default review budget; broader crawling of sams.pt was not performed."
+  - "No authentication-gated, paywalled, or CAPTCHA-protected content was accessed."
