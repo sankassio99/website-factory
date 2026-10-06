@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #1b1650;
+  --color-deep: #2a1d7c;
+  --color-water: #0b6fa8;
+  --color-aqua: #e6f4fb;
+  --color-sun: #e08a24;
+  --color-sun-dark: #8a4a00;
+  --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-sun);
+  outline-offset: 3px;
+}
+
+.waves {
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgb(11 111 168 / 0.55), transparent 60%),
+    linear-gradient(135deg, #1b1650 0%, #2a1d7c 55%, #0b6fa8 100%);
+}
+
+.reveal-ready .reveal-armed {
+  opacity: 0;
+  transform: translateY(90px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--i, 0) * 150ms);
+}
+
+.reveal-ready .reveal-armed[data-reveal="left"] {
+  transform: translateX(-120px);
+}
+
+.reveal-ready .reveal-armed[data-reveal="right"] {
+  transform: translateX(120px);
+}
+
+.reveal-ready .reveal-armed[data-reveal="zoom"] {
+  transform: scale(0.6) rotate(-8deg);
+}
+
+.reveal-ready .reveal-armed.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+[data-header] {
+  transition: box-shadow 0.3s ease;
+}
+
+[data-header][data-scrolled] {
+  box-shadow: 0 6px 20px rgb(27 22 80 / 0.12);
+}
+
+.card-lift {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+html .card-lift.card-lift:hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgb(27 22 80 / 0.15);
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float {
+    animation: none;
+  }
+  .card-lift:hover {
+    transform: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
