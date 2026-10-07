@@ -1,0 +1,159 @@
+schema_version: 1
+name: premium-barbershop-template
+source:
+  analyzed_at: 2026-10-07
+  analyzed_pages:
+    - page_type: home
+
+design_system:
+  palette:
+    - name: primary-dark
+      hex: "#071321"
+      usage: Dark backgrounds, header, footer, and major content sections
+      confidence: approximate_observed
+    - name: gold
+      hex: "#B28A4F"
+      usage: Primary actions, decorative elements, prices, and accents
+      confidence: approximate_observed
+    - name: cream
+      hex: "#F8F1E5"
+      usage: Light section backgrounds and content areas
+      confidence: approximate_observed
+    - name: white
+      hex: "#FFFFFF"
+      usage: Text and light backgrounds
+      confidence: observed
+    - name: dark-text
+      hex: "#17202B"
+      usage: Text on light backgrounds
+      confidence: approximate_observed
+
+  typography:
+    - role: display-heading
+      family: "Righteous"
+      confidence: high_inferred
+      usage: Hero headings and prominent section titles
+
+    - role: body
+      family: "Poppins"
+      confidence: medium_inferred
+      usage: Paragraphs, service descriptions, and supporting content
+
+    - role: navigation
+      family: "Poppins"
+      confidence: medium_inferred
+      usage: Navigation, labels, buttons, and small interface text
+
+  shape:
+    border_radius: Moderate rounded corners used on cards and image containers; exact value unknown
+
+  layout:
+    breakpoints: []
+    spacing_scale: []
+    container_style: Centered content with wide horizontal sections
+    section_pattern: Alternating dark and light full-width sections
+
+pages:
+  - page_type: home
+    purpose: Present the barbershop brand, establish credibility, showcase services and barbers, provide social proof, and drive appointment bookings.
+    sections:
+      - name: header
+        content_role: Provide brand identity and primary site navigation.
+        layout_pattern: Horizontal navigation over dark/transparent header
+        components: [logo, navigation, primary-action]
+
+      - name: hero
+        content_role: Introduce the barbershop and encourage visitors to make an appointment.
+        layout_pattern: Full-width background image with centered overlay content
+        components: [background-image, eyebrow, heading, supporting-copy, primary-action]
+
+      - name: experience
+        content_role: Establish credibility through the barbershop's experience and history.
+        layout_pattern: Two-column text and image
+        components: [heading, supporting-copy, experience-highlight, image-slot, business-hours, primary-action]
+
+      - name: services
+        content_role: Show the available grooming services and their prices.
+        layout_pattern: Centered heading with horizontal service cards
+        components: [section-heading, service-card, service-icon, service-name, price]
+
+      - name: hair-and-beard
+        content_role: Communicate expertise and emphasize professional hair and beard care.
+        layout_pattern: Two-column image and text
+        components: [image-slot, heading, supporting-copy, feature-list, primary-action]
+
+      - name: satisfaction
+        content_role: Reinforce service quality and customer satisfaction.
+        layout_pattern: Dark two-column content section
+        components: [heading, supporting-copy, image-slot, business-information]
+
+      - name: team
+        content_role: Introduce the barbers and personalize the business.
+        layout_pattern: Horizontal team-card collection
+        components: [section-heading, team-card, portrait, name, role, social-links]
+
+      - name: newsletter
+        content_role: Capture email subscribers using a promotional discount.
+        layout_pattern: Full-width promotional banner with centered content
+        components: [promotional-heading, supporting-copy, email-input, submit-action]
+
+      - name: testimonials
+        content_role: Provide social proof through customer feedback.
+        layout_pattern: Centered testimonial card with carousel controls
+        components: [section-heading, testimonial-card, testimonial-copy, carousel-controls]
+
+      - name: tips-and-tricks
+        content_role: Provide useful grooming content and additional engagement opportunities.
+        layout_pattern: Section with three article cards
+        components: [section-heading, article-card, article-image, article-title, article-meta]
+
+      - name: footer
+        content_role: Provide secondary navigation, business information, hours, and contact details.
+        layout_pattern: Multi-column dark footer
+        components: [navigation-links, business-hours, company-links, contact-information, social-links, copyright]
+
+assets:
+  - role: Hero image reference
+    format: image
+    dimensions: "Rendered within 477x2048 source screenshot; source asset dimensions unknown"
+    reuse_status: reference_only
+
+  - role: Experience section image
+    format: image
+    dimensions: unknown
+    reuse_status: reference_only
+
+  - role: Service icons
+    format: vector_or_raster
+    dimensions: unknown
+    reuse_status: reference_only
+
+  - role: Hair and beard section image
+    format: image
+    dimensions: unknown
+    reuse_status: reference_only
+
+  - role: Customer satisfaction image
+    format: image
+    dimensions: unknown
+    reuse_status: reference_only
+
+  - role: Barber team portraits
+    format: image
+    dimensions: unknown
+    reuse_status: reference_only
+
+  - role: Barbershop decorative logo/illustration
+    format: vector_or_raster
+    dimensions: unknown
+    reuse_status: reference_only
+
+  - role: Testimonial imagery
+    format: image
+    dimensions: unknown
+    reuse_status: reference_only
+
+  - role: Tips and tricks article images
+    format: image
+    dimensions: unknown
+    reuse_status: reference_only

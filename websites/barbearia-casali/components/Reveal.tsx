@@ -1,0 +1,26 @@
+"use client";
+
+import { motion } from "motion/react";
+import type { ReactNode } from "react";
+
+type Props = {
+  children: ReactNode;
+  delay?: number;
+  x?: number;
+  y?: number;
+  className?: string;
+};
+
+export function Reveal({ children, delay = 0, x = 0, y = 32, className }: Props) {
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, x, y }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {children}
+    </motion.div>
+  );
+}
